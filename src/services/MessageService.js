@@ -12,7 +12,7 @@ class MessageService {
                 from,
                 body
             });
-            message => console.log(message.sid);
+            console.log(message);
         } catch (err) {
             console.error(err);
             throw err;
