@@ -14,7 +14,6 @@ class Services {
     }
 
     async criaRegistro(dadosDoRegistro) {
-        console.log('Teste')
         return dataSource[this.model].create(dadosDoRegistro);
     }
 
