@@ -20,8 +20,6 @@ class MessageController extends Controller {
             const idReserva = req.params.id;
             const mensagens = await messageService.todasMensagensDaReserva(idReserva)
             return res.json(mensagens);
-            //return res.status(500).json({ error: 'oi' });
-
         } catch (error) {
             console.error('Erro ao buscar mensagens da reserva:', error);
             return res.status(500).json({ error: 'Erro ao buscar mensagens da reserva' });

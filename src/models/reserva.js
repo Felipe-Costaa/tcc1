@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
                 foreignKey: 'id_pista_reservada'
             })
             Reserva.hasMany(models.Mensagem, {
-                foreignKey: 'reserva_id'
+                foreignKey: 'reserva_id',
+                onDelete: 'CASCADE'
             });
         }
     }
