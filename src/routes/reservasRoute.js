@@ -10,6 +10,8 @@ router.get('/reservas/:id', (req, res) => reservaController.pegaUmPorId(req, res
 router.post('/reservas', (req, res) => reservaController.criaNovo(req, res));
 router.put('/reservas/:id', (req, res) => reservaController.atualiza(req, res));
 router.delete('/reservas/:id', (req, res) => reservaController.exclui(req, res));
+router.get('/reservas/abertas', (req, res) => reservaController.pegaReservasPorStatus(req, res, 'aberta'));
+router.get('/reservas/finalizadas', (req, res) => reservaController.pegaReservasPorStatus(req, res, 'finalizada'));
 
 
 
